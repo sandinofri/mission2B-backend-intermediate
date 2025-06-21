@@ -21,7 +21,7 @@ export const getFilms = async()=>{
 }
 
 export const addMovie = async (title,description,rating,release_date,type,genre_id,thumbnail_url)=>{
-    const [result] = await dbConnection.query('INSERT INTO series_or_films (title,description,rating,release_date,type,genre_id,thumbnail_url) VALUE (?,?,?,?,?,?,?)',[title,description,rating,release_date,type,genre_id,thumbnail_url])
+    const [result] = await dbConnection.query('INSERT INTO series_or_films (title,description,rating,release_date,type,genre_id,thumbnail_url) VALUES (?,?,?,?,?,?,?)',[title,description,rating,release_date,type,genre_id,thumbnail_url])
     return result
 }
 
