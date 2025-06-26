@@ -12,7 +12,7 @@ export const sendVerificationEmail = async (toEmail, token) => {
   const verificationLink = `http://localhost:3000/verify?token=${token}`;
 
   const mailOptions = {
-    from: '"My App" <emailkamu@gmail.com>',
+    from: '"My App" <example@gmail.com>',
     to: toEmail,
     subject: 'Verifikasi Akun Anda',
     html: `
