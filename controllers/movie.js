@@ -10,7 +10,8 @@ import {
 
 export const getMovieController = async (req, res) => {
   try {
-    const data = await getMovies();
+     const { search, genre, sortBy = 'id', sortOrder = 'asc' } = req.query;
+    const data = await getMovies({ search, genre, sortBy, sortOrder });
     return res.json({
       message: "success get data",
       data: data,
